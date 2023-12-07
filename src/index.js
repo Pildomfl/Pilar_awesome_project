@@ -10,12 +10,15 @@ function refreshWeather(response) {
   let iconElement = document.querySelector("#icon");
 
   cityElement.innerHTML = response.data.city;
-  timeElement.innerHTML = formatDate(date);
+  timeElement.innerHTML = formatDate(new Date(date));
   descriptionElement.innerHTML = response.data.condition.description;
-  humidityElement.innerHTML = `${response.data.temperature.humidity}%`;
-  windSpeedElement.innerHTML = `${response.data.wind.speed}km/h`;
+  humidityElement.innerHTML = response.data.temperature.humidity + "%";
+  windSpeedElement.innerHTML = response.data.wind.speed + "km/h";
   temperatureElement.innerHTML = Math.round(temperature);
-  iconElement.innerHTML = `<img src="${response.data.condition.icon_url}" class="weather-app-icon" />`;
+  iconElement.innerHTML =
+    '<img src="' +
+    response.data.condition.icon_url +
+    '" class="weather-app-icon" />';
 
   getForecast(response.data.city);
 }
