@@ -45,6 +45,10 @@ header {
   border-radius: 8px;
   color: #a7d7c5;
 }
+.search-form-button:hover {
+  transition: all 250ms ease-in-out;
+  cursor: pointer;
+}
 
 main {
   padding: 30px 0;
