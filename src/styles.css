@@ -46,7 +46,7 @@ header {
   color: #a7d7c5;
 }
 .search-form-button:hover {
-  transition: all 250ms ease-in-out;
+  transition: ease-in-out;
   cursor: pointer;
 }
 
