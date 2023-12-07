@@ -95,7 +95,7 @@ function displayForecast(response) {
 }
 
 let searchFormElement = document.querySelector("#search-form");
-searchFormElement.addEventListener("submit", handleSearchSubmit);
+searchFormElement.addEventListener("search", handleSearchSubmit);
 
 getForecast("Madrid");
 displayForecast();
