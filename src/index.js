@@ -64,10 +64,10 @@ function formatDay(timestamp) {
 function getForecast(city) {
   let apiKey = "b2a5adcct04b33178913oc335f405433";
   let apiUrl = `https://api.shecodes.io/weather/v1/forecast?query=${city}&key=${apiKey}&units=metric`;
-  axios(apiUrl).then(getForecast);
+  axios(apiUrl).then(displayForecast);
 }
 
-function getForecast(response) {
+function displayForecast(response) {
   let forecastHtml = "";
 
   response.data.daily.forEach(function (day, index) {
@@ -100,3 +100,4 @@ let searchFormElement = document.querySelector("#search-form");
 searchFormElement.addEventListener("submit", handleSearchSubmit);
 
 getForecast("Madrid");
+displayForecast();
